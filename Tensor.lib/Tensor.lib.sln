@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tensor.lib", "Tensor.lib\Tensor.lib.csproj", "{FCF963F4-46FD-4726-A24D-621C4A2A2BBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TensorUnitTest.test", "TensorUnitTest.test\TensorUnitTest.test.csproj", "{B4713EB8-309A-40F7-A86C-CAE6C548EECE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCF963F4-46FD-4726-A24D-621C4A2A2BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCF963F4-46FD-4726-A24D-621C4A2A2BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCF963F4-46FD-4726-A24D-621C4A2A2BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCF963F4-46FD-4726-A24D-621C4A2A2BBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4713EB8-309A-40F7-A86C-CAE6C548EECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4713EB8-309A-40F7-A86C-CAE6C548EECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4713EB8-309A-40F7-A86C-CAE6C548EECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4713EB8-309A-40F7-A86C-CAE6C548EECE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5959BB94-2E98-4DCE-8819-DDCEBE6660F3}
+	EndGlobalSection
+EndGlobal
