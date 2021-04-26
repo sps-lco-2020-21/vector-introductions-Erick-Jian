@@ -45,5 +45,11 @@
     <Compile Include="TensorException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TensorUnitTest.test\TensorUnitTest.test.csproj">
+      <Project>{b4713eb8-309a-40f7-a86c-cae6c548eece}</Project>
+      <Name>TensorUnitTest.test</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

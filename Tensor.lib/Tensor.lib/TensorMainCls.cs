@@ -14,6 +14,7 @@ namespace Tensor.lib
     // IEquatable: same type for each component other wise can't used -- all key in dictionary must be key type ??
     // IEnumerable: (implicit) pass in a list, not actively taking in a list -- taking value only; UNI-Directional
     //      e.g. vector object take in a list, can't run foreach " item in vector object"
+    //      e.g. I can loop over the content
 
     // IEnumerator: (more explicit) yield -- going through collection each time, return value
     //                  next time come back to the last returned position, get next one
@@ -47,22 +48,41 @@ namespace Tensor.lib
 
         public double ComputeMagnitude()
         {
-            double magnitude = 0;
+            double _magnitude = 0;
             foreach (double item in _vectorlist)
             {
-                magnitude += Math.Pow(item, 2);
+                _magnitude += Math.Pow(item, 2);
             }
-            return magnitude;
+            return _magnitude;
+        }
+
+        public double ComputeScalarProduct(Vector other)
+        {
+            double _DotProduct = 0;
+            
+            if (this.GetVectorItself.Count != other.GetVectorItself.Count)
+            {
+                Console.WriteLine("bruh");
+                throw new Exception("VectorMultiplicationException - press [1]:stop [0]:add 0s for the short vector");
+                    if (Console.ReadKey().Key == ConsoleKey.D1)
+                    {
+                        
+                    }
+                    if (Console.ReadKey().Key == ConsoleKey.D0)
+                    {
+                        
+                    }
+            }
+            for (double count = 0; count < o )
+            {
+                _DotProduct += other.GetVectorItself * 
+            }
+            return _DotProduct;
         }
 
         public double ComputeAngle()        // to the POSITIVE x axis
         {
-
-        }
-
-        public double ComputeScalarProduct(Vector vII)
-        {
-
+            // angle between the vector and 
         }
 
         public double ComputeVectorProduct(Vector vII)
