@@ -63,19 +63,32 @@ namespace Tensor.lib
             if (this.GetVectorItself.Count != other.GetVectorItself.Count)
             {
                 Console.WriteLine("bruh");
-                throw new Exception("VectorMultiplicationException - press [1]:stop [0]:add 0s for the short vector");
-                    if (Console.ReadKey().Key == ConsoleKey.D1)
-                    {
-                        
+                Console.WriteLine("VectorMultiplicationException - press [0]:stop [1]:fill in 0 for the short vector");
+                if (Console.ReadKey().Key == ConsoleKey.D1)
+                {
+                    if (this.GetVectorItself.Count > other.GetVectorItself.Count)
+                    { 
+                        for (int i = 0; i < (this.GetVectorItself.Count - other.GetVectorItself.Count); ++i)
+                        {
+                            other.GetVectorItself.Append(0);
+                        }
                     }
-                    if (Console.ReadKey().Key == ConsoleKey.D0)
+                    else if (other.GetVectorItself.Count > this.GetVectorItself.Count)
                     {
-                        
+                        for (int j = 0; j < (other.GetVectorItself.Count - this.GetVectorItself.Count); ++j)
+                        {
+                            this.GetVectorItself.Append(0);
+                        }
                     }
+                }
+                if (Console.ReadKey().Key == ConsoleKey.D0)
+                {
+                    Console.WriteLine("skipped...")
+                }
             }
-            for (double count = 0; count < o )
+            for (int count = 0; count < _vectorlist.Count - 1; ++ count )
             {
-                _DotProduct += other.GetVectorItself * 
+                _DotProduct += other.GetVectorItself[count] * this.GetVectorItself[count];
             }
             return _DotProduct;
         }
