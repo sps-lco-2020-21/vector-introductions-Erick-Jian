@@ -83,7 +83,7 @@ namespace Tensor.lib
                 }
                 if (Console.ReadKey().Key == ConsoleKey.D0)
                 {
-                    Console.WriteLine("skipped...")
+                    Console.WriteLine("skipped...");
                 }
             }
             for (int count = 0; count < _vectorlist.Count - 1; ++ count )
@@ -93,22 +93,26 @@ namespace Tensor.lib
             return _DotProduct;
         }
 
-        public double ComputeAngle()        // to the POSITIVE x axis
+        public double ComputeAngle(Vector that)        // to the POSITIVE x axis
         {
-            // angle between the vector and 
+            // by definition
+            double _Angle = Math.Acos(this.ComputeScalarProduct(that) / (this.ComputeMagnitude() * that.ComputeMagnitude()));
+            return _Angle;
         }
 
-        public double ComputeVectorProduct(Vector vII)
+        public double ComputeVectorProduct(Vector that)
         {
-
+            double _CrossProduct = Math.Sin(this.ComputeAngle(that)) * this.ComputeMagnitude() * that.ComputeMagnitude();
+            return _CrossProduct;
+            // cross multiplication method: not yet
         }
         
-        public string CompareMagnitude(Vector vII)  // take the object property straightaway
+        public string CompareMagnitude(Vector that)  // take the object property straightaway
         {
 
         }
 
-        public bool CompareDimension(Vector vII)
+        public bool CompareDimension(Vector that)
         {
 
         }
